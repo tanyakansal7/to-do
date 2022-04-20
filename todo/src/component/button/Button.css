@@ -1,0 +1,15 @@
+.add{
+   
+    width: 8%;
+    padding: 0.5% 1%;
+    border-radius: 5%;
+    background-color: #ff3f6c;
+    font-size: 1.1rem;
+    color: white;
+    /* margin: 2% 70%; */
+    
+}
+.add:hover{
+    background-color: #fa2658;
+    cursor: pointer;
+}

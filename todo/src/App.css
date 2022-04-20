@@ -1,0 +1,20 @@
+html {
+	scroll-behavior: smooth;
+}
+
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+  background-color: #ff3f6c;
+  
+}
+/* ff3f6c */
+h1{
+  font-size: 3rem;
+  color: white;
+  font-weight: 400;
+  margin-top: 2%;
+  padding: 2% 8%;
+  text-align: center;
+}
