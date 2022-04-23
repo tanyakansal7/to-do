@@ -1,13 +1,47 @@
 import './App.css';
-import Base from './component/base/Base';
-import Footer from './component/footer/Footer';
+import { useState } from 'react';
 function App() {
+const[inputData,setInputData]=useState('');
+const[taskList,setTaskList]=useState([]);
+const addTask=()=>{
+  if(!inputData){}
+  else{
+  setTaskList([...taskList,inputData]);
+}
+  
+}
+const delTask=(ind)=>{
+  console.log(ind)
+  const finalList=taskList.filter((elem,id)=> id!==ind)
+  
+  setTaskList(finalList);
+  
+}
+
   return (
-    <div className="App">
-     <h1> Hi Tanya! Welcome back to add some new tasks to your to-do list.</h1>
-     <Base/>
-     <Footer/>
-    </div>
+  <>     
+  <h1>Hello! Add a few notes</h1>
+       <div className="base">
+         <div className="add-task">
+        
+         <input type="text"  className='input' onChange={(e)=>setInputData(e.target.value)}/>
+    
+          <button className="btn" onClick={addTask}>ADD +</button>
+         </div>
+         <div className="task-list">
+         
+           {
+            taskList.map((task,ind)=>{
+              return(
+              <div className="task" key={ind}>{task}<i className="fa-solid fa-xmark" onClick={()=>delTask(ind)}></i></div>
+              )
+            })
+           
+           }
+           
+         </div>
+       </div>
+  </>
   );
 }
 
